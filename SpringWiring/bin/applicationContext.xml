@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd ">
+
+<!-- Manual Wiring 
+<bean id="bean4" class="com.spring.beans.Bean4"></bean>
+
+<bean id="bean3" class="com.spring.beans.Bean3">
+<constructor-arg index="0" type="com.spring.beans.Bean4" ref="bean4"></constructor-arg>
+</bean>
+
+<bean id="bean2" class="com.spring.beans.Bean2">
+<property name="bean3" ref="bean3"></property>
+</bean>
+
+<bean id="bean1" class="com.spring.beans.Bean1">
+<property name="bean2" ref="bean2"></property>
+</bean>
+
+-->
+
+<bean id="bean4" class="com.spring.beans.Bean4"></bean>
+<bean id="bean3" class="com.spring.beans.Bean3" autowire="autodetect"></bean>
+<bean id="bean2" class="com.spring.beans.Bean2" autowire="autodetect"></bean>
+<bean id="bean1" class="com.spring.beans.Bean1" autowire="autodetect"></bean>
+	
+</beans>
